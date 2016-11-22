@@ -11,7 +11,7 @@ var ResizeWebview = function() {};
 **************************************************************************/
 
 ResizeWebview.getFrame = function(successCallback,failCallback) {
-  successCallback = successCallback || successCallback = function(){};
+  successCallback = successCallback || function(){};
   if (typeof failCallback == 'undefined') {
     failCallback = successCallback;
   }
@@ -20,7 +20,7 @@ ResizeWebview.getFrame = function(successCallback,failCallback) {
 };
 
 ResizeWebview.setFrame = function(object, successCallback, failCallback) {
-  successCallback = successCallback || successCallback = function(){};
+  successCallback = successCallback || function(){};
   if (typeof failCallback == 'undefined') {
     failCallback = successCallback;
   }
