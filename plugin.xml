@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-resizewebview"
+    version="0.1.0">
+    <name>Resize Web View</name>
+    <description>Cordova plugin that allows resizing the webview itself.</description>
+    <license>Apache 2.0</license>
+    <keywords>Phonegap, Cordova, Plugin, UIWebView</keywords>
+    <repo>https://github.com/jvjvjv/cordova-plugin-resizewebview.git</repo>
+    <issue>https://github.com/jvjvjv/cordova-plugin-resizewebview/issues</issue>
+
+  <js-module src="www/ResizeWebview.js" name="ResizeWebview">
+    <clobbers target="ResizeWebview" />
+  </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="ResizeWebview">
+                <param name="ios-package" value="ResizeWebview" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/ResizeWebview.h" />
+        <source-file src="src/ios/ResizeWebview.m" />
+    </platform>
+
+</plugin>
